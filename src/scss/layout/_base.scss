@@ -1,0 +1,23 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  font-family: var(--ff);
+}
+.wrapper {
+  max-width: 1440px;
+  margin-inline: auto;
+}
+.container {
+  max-width: 1264px;
+  margin-inline: auto;
+  padding: 0 30px;
+
+  @include mobile {
+    padding: 0 10px;
+  }
+}
+.none {
+  display: none !important;
+}

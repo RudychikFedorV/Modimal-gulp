@@ -1,0 +1,11 @@
+.top-info {
+  background: var(--primary-primary-600);
+
+  &__txt {
+    padding: 8px 0 7px;
+    font: var(--txt-600-12-ff);
+    letter-spacing: 0.07em;
+    text-align: center;
+    color: var(--white);
+  }
+}
