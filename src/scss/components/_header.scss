@@ -1,79 +1,127 @@
 .header {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 20px;
-	border-bottom: 1px solid var(--c-border);
+  .container {
+    @include flex-spaceBetween-center;
+    padding-top: 16px;
+    padding-bottom: 18px;
+  }
+  &__logo {
+    @include tablet {
+      margin-inline: auto;
+	  padding-left: 56px;
+    }
+  }
+  &__backdrop {
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    transform: translateX(120%);
+    display: none;
+    transition: var(--transition);
+    opacity: 0;
 
-	&__backdrop {
-		background: rgba(0, 0, 0, 0.6);
-		position: fixed;
-		width: 100%;
-		height: 100%;
-		left: 0;
-		top: 0;
-		z-index: 1;
-		transform: translateX(120%);
-		display: none;
-		transition: var(--transition);
-		opacity: 0;
+    @include tablet {
+      display: block;
+    }
 
-		@include tablet {
-			display: block;
-		}
+    &._active {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
 
-		&._active {
-			opacity: 1;
-			transform: translateX(0);
-		}
-	}
+  &__ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    z-index: 9;
 
-	&__ul {
-		display: flex;
-		align-items: center;
-		gap: 20px;
-		z-index: 9;
+    @include tablet {
+      z-index: 9;
+      position: fixed;
+      width: 70%;
+      height: 100%;
+      flex-direction: column;
+      left: 0;
+      top: 0;
+      background: var(--c-primary);
+      align-items: center;
+      justify-content: center;
+      transform: translateX(-120%);
+      transition: var(--transition);
+    }
 
-		@include tablet {
-			z-index: 9;
-			position: fixed;
-			width: 70%;
-			height: 100%;
-			flex-direction: column;
-			left: 0;
-			top: 0;
-			background: var(--c-primary);
-			align-items: center;
-			justify-content: center;
-			transform: translateX(-120%);
-			transition: var(--transition);
-		}
+    &._active {
+      transform: translateX(0);
+    }
 
-		&._active {
-			transform: translateX(0);
-		}
+    .icon-close {
+      position: absolute;
+      top: 40px;
+      right: 40px;
+      color: var(--c-text-white);
+    }
+  }
 
-		.icon-close {
-			position: absolute;
-			top: 40px;
-			right: 40px;
-			color: var(--c-text-white);
-		}
-	}
-
-	&__a {
-		@include tablet {
-			color: var(--c-text-white);
-		}
-	}
+  &__a {
+    font: var(--txt-400-18-ff);
+    text-transform: capitalize;
+    text-align: center;
+    color: var(--neutral-gray404040);
+    transition: var(--transition);
+    &:hover {
+      color: var(--black);
+    }
+    @include tablet {
+      color: var(--c-text-white);
+    }
+  }
+  &__social {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    @include mobile {
+      gap: 8px;
+    }
+    .icon {
+      display: flex;
+      gap: 24px;
+      @include mobile {
+        gap: 8px;
+      }
+    }
+    &-icon1 {
+      @include tablet {
+        position: absolute;
+        top: 55px;
+        left: 65px;
+		@include mobile {
+			left: 50px;
+		  }
+      }
+      &__person {
+        @include tablet {
+          display: none;
+        }
+      }
+    }
+  }
 }
 
 .icon-menu,
 .icon-close {
-	cursor: pointer;
-	display: none;
+  cursor: pointer;
+  display: none;
 
-	@include tablet {
-		display: inline-block;
-	}
+  @include tablet {
+    display: inline-block;
+  }
+}
+.icon-menu {
+  position: absolute;
+  top: 55px;
+  left: 20px;
 }
