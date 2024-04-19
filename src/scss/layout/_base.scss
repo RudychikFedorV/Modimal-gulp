@@ -13,6 +13,7 @@ body {
   max-width: 1264px;
   margin-inline: auto;
   padding: 0 30px;
+  height: 100%;
 
   @include mobile {
     padding: 0 20px;
@@ -20,4 +21,20 @@ body {
 }
 .none {
   display: none !important;
+}
+.btn {
+  font: var(--txt-400-14-ff);
+  text-transform: capitalize;
+  text-align: center;
+  color: var(--black);
+
+  display: inline-block;
+  padding: 8px 67px;
+  background: var(--white);
+  @include mobile {
+    padding: 8px 9px;
+  }
+}
+img {
+  cursor: pointer;
 }

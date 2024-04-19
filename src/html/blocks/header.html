@@ -1,8 +1,8 @@
 <header class="header">
 	<div class="container">
-		<svg class="header__logo logo" aria-label="Logo icon">
-			<use href="./img/sprites.svg#logo"></use>
-		</svg>
+		<div class="header__logo" aria-label="Logo icon">
+			<img src="./img/header/logo.svg" alt="Logo" aria-label="Logo img">
+		</div>
 		</svg>
 		<div class="header__nav" aria-label="header navigation">
 			<div class="header__backdrop" id="headerBackdrop" onclick="navToggle()"></div>
@@ -15,7 +15,22 @@
 			</ul>
 			<span class="material-icons icon-menu" onclick="navToggle()">menu</span>
 		</div>
-		<div class="header__social">
+		<div class="header__social" aria-label="header social">
+			<div class="header__social-icon1 icon" aria-label="header icon">
+				<img src="./img/header/search.svg" alt="Search" class="header__social-icon1__search">
+			</div>
+			<div class="header__social-icon1 icon" aria-label="header icon">
+				<img src="./img/header/person.svg" alt="Person" class="header__social-icon1__person">
+			</div>
+
+			<div class="header__social-icon2 icon" aria-label="header icon">
+				<img src="./img/header/favorite.svg" alt="Favorite" class="header__social-icon2__favorite">
+			</div>
+			<div class="header__social-icon2 icon" aria-label="header icon">
+				<img src="./img/header/bag.svg" alt="Bag" class="header__social-icon2__bag">
+			</div>
+		</div>
+		<!-- <div class="header__social" aria-label="header social">
 			<svg class="header__social-icon1 icon" aria-label="header icon">
 				<use href="./img/sprites.svg#search" class="header__social-icon1__search"></use>
 			</svg>
@@ -29,7 +44,7 @@
 			<svg class="header__social-icon2 icon" aria-label="header icon">
 				<use href="./img/sprites.svg#bag" class="header__social-icon2__bag"></use>
 			</svg>
-		</div>
+		</div> -->
 	</div>
 
 </header>
