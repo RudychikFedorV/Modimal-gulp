@@ -1,0 +1,17 @@
+<section class="best">
+    <div class="container">
+        <div class="best-block">
+            <h1 class="best-block__title">Best Sellers</h1>
+            <a href="#!" class="btn best-block__btn">view all</a>
+        </div>
+
+        <div class="best__cards">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    @@loop('swiper-slide.html', './data/best.json')
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+</section>

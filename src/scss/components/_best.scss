@@ -1,0 +1,29 @@
+.best {
+  padding-top: 88px;
+  padding-bottom: 88px;
+  @include mobile {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  &-block {
+    @include flex-spaceBetween-center;
+    margin-bottom: 24px;
+    @include mobile {
+      margin-bottom: 8px;
+    }
+    &__title {
+      font: var(--txt-600-32-ff);
+      text-transform: capitalize;
+      color: var(--black);
+      @include mobile {
+        font: var(--txt-700-20-ff);
+      }
+    }
+    &__btn {
+      padding: 0;
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+}

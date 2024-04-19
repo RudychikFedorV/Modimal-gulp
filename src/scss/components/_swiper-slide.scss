@@ -1,0 +1,43 @@
+.card {
+  position: relative;
+  &-btn {
+    position: absolute;
+    padding: 4px 8px;
+    left: 24px;
+    top: 24px;
+    @include mobile {
+      display: none;
+    }
+  }
+  &-favorite {
+    position: absolute;
+    right: 24px;
+    top: 24px;
+  }
+  &-txt {
+    padding: 6px 8px 8px;
+    &__title {
+      font: var(--txt-700-16-ff);
+      text-transform: capitalize;
+      color: var(--black);
+    }
+    &__cols {
+      @include flex-spaceBetween-center;
+      gap: 20px;
+      &-desc {
+        font: var(--txt-400-16-ff);
+        text-transform: capitalize;
+        color: var(--black);
+      }
+      &-price {
+        font: var(--txt-700-16-ff);
+        text-transform: capitalize;
+        color: var(--black);
+      }
+    }
+    &__colors {
+      display: flex;
+      gap: 8px;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+<div class="swiper-slide">
+    <article class="card">
+
+        <div class="card-img">
+            <img src="./img/best/best-@@img.jpg" alt="tailored stretch">
+        </div>
+
+        <div class="btn card-btn">
+            <a href="#!">new</a>
+        </div>
+
+        <div class="card-favorite">
+            <img src="./img/header/favorite.svg" alt="Favorite">
+        </div>
+
+        <div class="card-txt">
+            <h2 class="card-txt__title">@@title</h2>
+            <div class="card-txt__cols">
+                <p class="card-txt__cols-desc">@@desc</p>
+                <p class="card-txt__cols-price">$@@price</p>
+            </div>
+
+            <div class="card-txt__colors">
+                @@for(var i = 0; i < context.colors.length; i++) { <div class="color color--`+context.colors[i]+`">
+            </div>
+            }
+        </div>
+
+</div>
+</article>
+</div>
