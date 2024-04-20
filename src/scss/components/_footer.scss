@@ -1,3 +1,9 @@
 .footer {
-	padding: 20px;
+  background: var(--black);
+  &-txt {
+    font: var(--txt-400-12-ff);
+    text-transform: capitalize;
+    color: var(--neutral-graycbcbcb);
+    padding: 24px 32px;
+  }
 }

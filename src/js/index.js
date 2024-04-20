@@ -38,3 +38,5 @@ const swiper = new Swiper('.swiper', {
 		clickable: true,
 	},
 });
+
+document.getElementById("copyright").textContent = new Date().getFullYear();

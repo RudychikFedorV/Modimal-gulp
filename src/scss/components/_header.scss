@@ -47,7 +47,7 @@
       flex-direction: column;
       left: 0;
       top: 0;
-      background: var(--c-primary);
+      background: var(--primary-primary800);
       align-items: center;
       justify-content: center;
       transform: translateX(-120%);
@@ -62,7 +62,7 @@
       position: absolute;
       top: 40px;
       right: 40px;
-      color: var(--c-text-white);
+      color: var(--white);
     }
   }
 
@@ -73,10 +73,10 @@
     color: var(--neutral-gray404040);
     transition: var(--transition);
     &:hover {
-      color: var(--black);
+      color: var(--state-color-warning);
     }
     @include tablet {
-      color: var(--c-text-white);
+      color: var(--white);
     }
   }
   &__social {
