@@ -22,6 +22,14 @@ body {
 .none {
   display: none !important;
 }
+.title {
+  font: var(--txt-600-32-ff);
+  text-transform: capitalize;
+  color: var(--black);
+  @include mobile {
+    font: var(--txt-700-20-ff);
+  }
+}
 .btn {
   font: var(--txt-400-14-ff);
   text-transform: capitalize;

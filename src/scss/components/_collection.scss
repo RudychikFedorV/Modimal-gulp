@@ -1,0 +1,29 @@
+.collection {
+  max-height: 1419px;
+  &-title {
+    margin-bottom: 24px;
+    @include mobile {
+      margin-bottom: 8px;
+    }
+  }
+  &-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+
+    @include mobile-small {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    &__col {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 64px;
+
+      @include mobile {
+        gap: 24px;
+      }
+    }
+  }
+}

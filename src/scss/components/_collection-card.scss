@@ -1,0 +1,11 @@
+.collection-card {
+  position: relative;
+  &__btn {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    @include mobile {
+      position: static;
+    }
+  }
+}
